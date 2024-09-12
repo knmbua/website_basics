@@ -1,0 +1,47 @@
+/* RESETS */
+body{
+    /* background: red */
+    margin:0;
+    font-family: sans-serif
+}
+
+    h3{
+    margin:0;
+  }  
+
+  a{
+    text-decoration: none;
+  }
+/* CUSTOM STYLES */
+
+  header{
+    /* Aligns the children on a row left to right */
+    display: flex;
+    /* Once you set display, flex you can align items vertically and horizontally with flexbox properties. */
+    /* align items will align the direct childrenon the y-axis (top to bottom) */
+    align-items: center;
+    /* push the direct children as far apart of possible, using the space between them (x-axis) */
+    /* justify-content: space-between; */
+    background: #13141dcc;
+    padding: 25px 7% 20px;
+  }
+
+  header nav{
+    /* percentage values are always a percentage of the parent's value (width/height) */
+    margin-left: 150px;
+  }
+  
+  header a{
+    color:orange
+  }
+  header a:hover, header a.active{
+    text-decoration: underline
+  }
+
+  header nav a {
+    color:white
+  }
+/* select all links within the nav except the last one */
+  header nav a:not(:last-child){
+   margin-right: 10px;
+  }
