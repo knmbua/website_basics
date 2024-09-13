@@ -1,8 +1,15 @@
+/* VARIABLES */
+:root {
+  --mygreen: greenyellow;
+}
+
 /* RESETS */
 body{
+  background: #22272ad5;
     /* background: red */
     margin:0;
-    font-family: sans-serif
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
     h3{
@@ -12,6 +19,18 @@ body{
   a{
     text-decoration: none;
   }
+
+/* ANIMATIONS */
+@keyframes slide-in{
+  from {
+    transform: translateX(-300%);
+  }
+
+  to {
+    transform:translateX(0);
+  }
+} 
+
 /* CUSTOM STYLES */
 
   header{
@@ -22,26 +41,89 @@ body{
     align-items: center;
     /* push the direct children as far apart of possible, using the space between them (x-axis) */
     /* justify-content: space-between; */
-    background: #13141dcc;
+    background: #121422cc;
     padding: 25px 7% 20px;
+  }
+
+  header a{
+    color:orange
+  }
+  header a:hover
+  header a.active {
+    text-decoration: underline
   }
 
   header nav{
     /* percentage values are always a percentage of the parent's value (width/height) */
     margin-left: 150px;
   }
-  
-  header a{
-    color:orange
-  }
-  header a:hover, header a.active{
-    text-decoration: underline
-  }
 
   header nav a {
     color:white
   }
+  
 /* select all links within the nav except the last one */
   header nav a:not(:last-child){
    margin-right: 10px;
   }
+
+  main{
+    display: flex;
+    justify-content: space-between;
+    padding:45px 3% 10%
+  }
+
+  section p {
+    color:var(--mygreen);
+  }
+  section h1{
+    color:white;
+    font-size: 3rem;
+    text-transform:uppercase;
+    margin:0 0 25px;
+    animation: slide-in 1s;
+    }
+
+    section button {
+      background: none;
+      border: 2px solid var(--mygreen);
+      padding: 0 0 0 15px;
+      color:white;
+      text-transform: uppercase;
+      cursor:pointer;
+      display:flex;
+      align-items: center;
+      transition:all .4s;
+    }
+
+    section button i {
+    color:#22272ad5;
+    font-size: 1.5rem;
+    background: var(--mygreen);
+    padding: 10px 15px;
+    margin-left: 15px;
+    }
+
+    section button:hover {
+      background: rgb(189, 227, 112);
+      color:#22272ad5;
+      transform: translateX(10px);
+    }
+
+    aside {
+      display:flex;
+      align-items: center;
+      transform: rotate(90deg);
+      position: relative;
+      left: 70px;
+    }
+
+    aside p {
+      color:var(--mygreen);
+      margin-right: 15px;
+    }
+
+    aside i {
+      color:white;
+      margin-right: 8px;
+    }
